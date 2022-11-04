@@ -17,7 +17,8 @@ if __name__ == "__main__":
         line_bot_api = LineBotApi(LINE_CHANNEL_ACCESS_TOKEN)
 
         try:
-            line_bot_api.broadcast(TextSendMessage(text='Remind paying rate'))
+            line_bot_api.broadcast(TextSendMessage(
+                text='Reminder. paying rate!!!!'))
 
         except LineBotApiError as e:
             print(e)
