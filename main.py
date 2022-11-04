@@ -1,13 +1,19 @@
 from linebot import LineBotApi
 from linebot.models import TextSendMessage
 from linebot.exceptions import LineBotApiError
-from datetime import date
+import datetime
 import os
+from dotenv import load_dotenv
 
-LINE_CHANNEL_ACCESS_TOKEN = os.environ["LINE_CHANNEL_ACCESS_TOKEN"]
+
+load_dotenv()
+LINE_CHANNEL_ACCESS_TOKEN = os.environ["ACCESS_TOKEN"]
+MONDAY = 0
 
 
 if __name__ == "__main__":
+    # today = datetime.date.today()
+    # if (today.weekday() == MONDAY):
     line_bot_api = LineBotApi(LINE_CHANNEL_ACCESS_TOKEN)
 
     try:
