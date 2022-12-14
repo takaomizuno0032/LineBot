@@ -18,7 +18,7 @@ if __name__ == "__main__":
 
         try:
             line_bot_api.broadcast(TextSendMessage(
-                text='Reminder. paying rate!!!!'))
+                text='Reminder. paying rent!!!!'))
 
         except LineBotApiError as e:
             print(e)
